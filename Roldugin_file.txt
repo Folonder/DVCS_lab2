@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import random
 import heapq # add comment
+=======
+import randomxl
+import heapq
+>>>>>>> Roldugin
 
 class MazeClass:
     def __init__(self, width, height):
