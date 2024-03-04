@@ -1,6 +1,8 @@
 import random
 import heapq
 
+#Генерация лабиринта
+
 class Maze:
     def __init__(self, width, height):
         self.width = width
@@ -70,4 +72,9 @@ if __name__ == "__main__":
         x, y = cell
         maze.grid[y][x] = 2
     print(maze)
-
+	
+x = int(input())
+while x > 0:
+    last = x % 2
+    print(last)
+    x = x // 2	
