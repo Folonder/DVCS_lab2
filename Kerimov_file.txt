@@ -61,8 +61,7 @@ if __name__ == "__main__":
     height = 24
     maze = Maze(width=width, height=height)
     maze.generate()
-    print("Generated Maze:")
-    print(maze)
+    print(f"Generated Maze:\n {maze}")
     start = (1, 1)
     end = (width-2, height-2)
     path = maze.solve(start, end)
