@@ -9,6 +9,7 @@ class Maze:
 
     def generate(self):
         stack = [(0, 0)]
+        # Цикл прохода по всем клеткам
         while stack:
             current_cell = stack[-1]
             x, y = current_cell
