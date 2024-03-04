@@ -4,8 +4,12 @@ import heapq
 //My first commit
 class Maze:
     def __init__(self, width, height):
-        self.width = width
+        self.width = width + 1
+<<<<<<< HEAD
+        self.height = height + 1
+=======
         self.height = height
+>>>>>>> Mikulina
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 
     def generate(self):
