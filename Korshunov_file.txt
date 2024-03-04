@@ -56,11 +56,12 @@ class Maze:
         return maze_str
 
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    # размеры поля
+    width = 25
+    height = 25
     maze = Maze(width, height)
     maze.generate()
-    print("Generated Maze:")
+    print("Generated new Maze:")
     print(maze)
     start = (1, 1)
     end = (width-2, height-2)
