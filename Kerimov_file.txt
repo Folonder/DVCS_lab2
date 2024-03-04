@@ -53,6 +53,7 @@ class Maze:
         for row in self.grid:
             maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
 "
+	print(maze_str)
         return maze_str
 
 if __name__ == "__main__":
