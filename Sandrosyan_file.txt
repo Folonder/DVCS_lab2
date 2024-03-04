@@ -25,7 +25,7 @@ class Labirint:
             else:
                 stack.pop()
 
-    def solve(self, start, end):
+    def solution(self, start, end):
         open_set = []
         closed_set = set()
         heapq.heappush(open_set, (0, start, []))
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     print(labirint)
     start = (1, 1)
     end = (width-2, height-2)
-    path = labirint.solve(start, end)
+    path = labirint.solution(start, end)
     print("Solved Labirint:")
     for cell in path:
         x, y = cell
