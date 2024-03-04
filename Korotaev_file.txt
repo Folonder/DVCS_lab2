@@ -57,6 +57,7 @@ class Maze:
 "
         return maze_str
 
+//генерация лабиринта
 if __name__ == "__main__":
     width = 21
     height = 21
