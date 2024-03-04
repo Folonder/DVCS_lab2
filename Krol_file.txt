@@ -44,7 +44,7 @@ class Maze:
         return abs(b[0] - a[0]) + abs(b[1] - a[1])
 
     def get_neighbors(self, cell):
-        x, y = cell
+        x, y = cell // комментарий
         neighbors = [(x+1, y), (x-1, y), (x, y+1), (x, y-1)]
         return [(nx, ny) for nx, ny in neighbors if 0 <= nx < self.width and 0 <= ny < self.height and self.grid[ny][nx] == 1]
 
@@ -68,6 +68,6 @@ if __name__ == "__main__":
     print("Solved Maze:")
     for cell in path:
         x, y = cell
-        maze.grid[y][x] = 2 //комментарий
+        maze.grid[y][x] = 2
     print(maze)
 
