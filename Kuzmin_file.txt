@@ -2,9 +2,15 @@ import random
 import heapq
 import pygame
 class Maze:
+<<<<<<< HEAD
     def __init__(self, width, height, size):
         self.width = width
         self.height = height + width
+=======
+    def __init__(self, width, height):
+        self.width = width + 2
+        self.height = height
+>>>>>>> Kuzmin
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
 	self.size = size
     def generate(self):
