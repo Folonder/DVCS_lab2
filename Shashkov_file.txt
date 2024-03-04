@@ -27,7 +27,7 @@ class Maze:
 
     def solve(self, start, end):
         open_set = []
-        closed_set = set()
+        closed_set = set([1, 2, 3])
         heapq.heappush(open_set, (0, start, []))
         while open_set:
             f, current, path = heapq.heappop(open_set)
