@@ -9,7 +9,7 @@ class Labirint:
 
     def generate(self):
         stack = [(0, 0)]
-        while stack:
+        while stack != 0:
             current_cell = stack[-1]
             x, y = current_cell
             self.grid[y][x] = 1
@@ -25,7 +25,7 @@ class Labirint:
             else:
                 stack.pop()
 
-    def solve(self, start, end):
+    def solution(self, start, end):
         open_set = []
         closed_set = set()
         heapq.heappush(open_set, (0, start, []))
@@ -49,25 +49,25 @@ class Labirint:
         return [(nx, ny) for nx, ny in neighbors if 0 <= nx < self.width and 0 <= ny < self.height and self.grid[ny][nx] == 1]
 
     def __str__(self):
-        maze_str = ""
+        labirint_str = ""
         for row in self.grid:
-            maze_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
+            labirint_str += "".join(["#" if cell == 1 else " " for cell in row]) + "
 "
-        return maze_str
+        return labirint_str
 
 if __name__ == "__main__":
-    width = 21
-    height = 21
-    maze = Maze(width, height)
-    maze.generate()
-    print("Generated Maze:")
-    print(maze)
+    width = 30
+    height = 30
+    labirint = Labirint(width, height)
+    labirint.generate()
+    print("Generated Labirint:")
+    print(labirint)
     start = (1, 1)
     end = (width-2, height-2)
-    path = maze.solve(start, end)
-    print("Solved Maze:")
+    path = labirint.solution(start, end)
+    print("Solved Labirint:")
     for cell in path:
         x, y = cell
-        maze.grid[y][x] = 2
-    print(maze)
+        labirint.grid[y][x] = 2
+    print(labirint)
 
