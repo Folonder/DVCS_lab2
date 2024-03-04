@@ -2,11 +2,11 @@ import random
 import heapq
 
 class Maze:
-    def __init__(self, width, height):
+    def __init__(self, width, height, size):
         self.width = width
         self.height = height
         self.grid = [[0 for _ in range(width)] for _ in range(height)]
-
+	self.size = size
     def generate(self):
         stack = [(0, 0)]
         while stack:
