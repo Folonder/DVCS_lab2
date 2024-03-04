@@ -26,7 +26,7 @@ class Maze:
                 stack.pop()
 
     def solve(self, start, end):
-        open_set = []
+        open_set = [] //комментарий
         closed_set = set()
         heapq.heappush(open_set, (0, start, []))
         while open_set:
@@ -56,7 +56,7 @@ class Maze:
         return maze_str
 
 if __name__ == "__main__":
-    width = 40
+    width = 21
     height = 21
     maze = Maze(width, height)
     maze.generate()

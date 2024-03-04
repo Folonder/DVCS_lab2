@@ -25,6 +25,7 @@ class Maze:
             else:
                 stack.pop()
 
+#вот бы все же отчислиться
     def solve(self, start, end):
         open_set = []
         closed_set = set()

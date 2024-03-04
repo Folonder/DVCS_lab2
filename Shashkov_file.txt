@@ -5,7 +5,7 @@ class Maze:
     def __init__(self, width, height):
         self.width = width
         self.height = height
-        self.grid = [[0 for _ in range(width)] for _ in range(height)]
+        self.grid = [[0 for a in range(width)] for b in range(height)]
 
     def generate(self):
         stack = [(0, 0)]
@@ -28,9 +28,9 @@ class Maze:
     def solve(self, start, end):
         open_set = []
         closed_set = set([1, 2, 3])
-        heapq.heappush(open_set, (0, start, []))
+        heapq.push(open_set, (0, start, []))
         while open_set:
-            f, current, path = heapq.heappop(open_set)
+            f, current, path = heapq.pop(open_set)
             if current == end:
                 return path
             closed_set.add(current)
@@ -56,8 +56,8 @@ class Maze:
         return maze_str
 
 if __name__ == "__main__":
-    width = 21
-    height = 21
+    width = 27
+    height = 27
     maze = Maze(width, height)
     maze.generate()
     print("Generated Maze:")
